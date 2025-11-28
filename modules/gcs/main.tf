@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "bucket" {
   name     = var.settings.bucket_name
-  location = lookup(var.settings, "location", "US")
+  location = lookup(var.settings, "location", "us-central1")
   project  = lookup(var.settings, "project_id", var.project_name)
 }
 
